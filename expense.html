@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Money Tracker App</title>
+  <link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <h1>Money Tracker</h1>
+    <form class="expense-form" id="expense-form" method="get" onsubmit="expenses">
+      <input type="text" class="expense-input" id="spending-name" placeholder="Spending Item" required />
+      <input type="number" class="expense-input" id="spending-amount" placeholder="Amount" required />
+      <button type="submit" class="add-btn">Add Spending</button>
+    </form>
+    <div class="expense-table">
+      <table class="table">
+        <thead>
+          <tr>
+            <th class="table-header">Spending Item</th>
+            <th class="table-header">Amount</th>
+            <th class="table-header">Action</th>
+          </tr>
+        </thead>
+        <tbody id="spending-list" class="table-data"></tbody>
+      </table>
+      <div class="total-amount">
+        <strong>Total:</strong> $<span id="total-spending">0</span>
+      </div>
+    </div>
+  </div>
+</body>
+<script src="script.js"></script>
+</html>
